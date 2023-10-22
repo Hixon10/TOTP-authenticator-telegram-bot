@@ -5,12 +5,12 @@
 [This bot](https://t.me/TotpAuthenticatorBot) allows to generate 2FA TOTP codes for two-factor authentication. Basically, it is a simple Authenticator, in case if you want to generate TOTP codes from any your device, which has access to your telegram account.
 It is your responsibility to use strong `SECRET_ENCODING_PASSWORD`, which is used to encrypt a `secret`.
 
+The bot is implemented on top of [Cloudflare Workers](https://workers.cloudflare.com/) and [Workers KV](https://www.cloudflare.com/products/workers-kv/).
+The worker `AES-CBC` encrypts secrets, before saving to the `Workers KV`. Encryption key are stored inside [Cloudflare Secrets](https://blog.cloudflare.com/workers-secrets-environment/).
+
 ## Security vulnerability
 
 This solution is not secure by any means. You send a `secret` via regular telegram message (during `save` stage), so anyone, who can read it (e.g., telegram employees, cloudflare employees, or anyone, who has direct access to your mobile phone) will be able to generate TOTP codes for your accounts. Therefore, **do not use this bot** for anything, what has any value for you.
-
-The bot is implemented on top of [Cloudflare Workers](https://workers.cloudflare.com/) and [Workers KV](https://www.cloudflare.com/products/workers-kv/).
-The worker `AES-CBC` encrypts secrets, before saving to the `Workers KV`. Encryption key are stored inside [Cloudflare Secrets](https://blog.cloudflare.com/workers-secrets-environment/).
 
 ## Credits
 1. [https://github.com/hectorm/otpauth](https://github.com/hectorm/otpauth) - I use it to generate TOTP codes.
