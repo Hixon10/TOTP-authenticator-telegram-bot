@@ -8,6 +8,9 @@
     "start": "wrangler dev"
   },
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^3.14.0"
+  },
+  "dependencies": {
+    "otpauth": "^9.1.5"
   }
 }
