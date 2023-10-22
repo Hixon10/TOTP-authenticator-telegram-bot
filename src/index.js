@@ -16,7 +16,7 @@ function getAboutBotInfo() {
 		'3. Get your list saved issuers using /myissuers command\n' +
 		'4. Delete all your issuers using /deleteissuers command\n' +
 		'5. Get user manual using /help command\n' +
-		'6. Get github repo of this bot using /help command'
+		'6. Get github repo of this bot using /about command'
 }
 
 addEventListener('fetch', event => {
