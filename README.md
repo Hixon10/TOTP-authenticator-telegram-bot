@@ -32,6 +32,7 @@ This solution is not secure by any means. You send a `secret` via regular telegr
 3. Thirdly, you need to set up previously created storage (step 1) for the Worker. You could do this either via [dashboard](https://dash.cloudflare.com), or using [Wrangler](https://developers.cloudflare.com/workers/cli-wrangler).
 4. After that, you need to configure the following Secrets for your worker: `BOT_TOKEN` (you can get it via [@BotFather](https://t.me/BotFather)), `MASTER_PASSWORD` (crypto random string), `MASTER_PASSWORD_SALT` (crypto random string). Again, you can use either the dashboard, or CLI.
 5. Finally, you need to set up `Telegram Bot Webhooks` for created worker - `curl -F "url=https://<YOURDOMAIN.EXAMPLE>/<WEBHOOKLOCATION>" https://api.telegram.org/bot<YOURTOKEN>/setWebhook`
+6. You can use `wrangler deploy` command, or `Cloudflare dashboard` to deploy a bot.
 
 ## Telegram bot authentication
 Unfortunately, there is no way to correctly implement authentication for a telegram bot. Their [documentation](https://core.telegram.org/bots/api#setwebhook) says:
