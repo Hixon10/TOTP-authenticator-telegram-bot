@@ -14,8 +14,9 @@ function getAboutBotInfo() {
 		'1. Save a secret (aka security code) using save command (/save ISSUER_NAME SECRET_ENCODING_PASSWORD SECRET)\n' +
 		'2. Generate a TOTP code using generate command (/generate ISSUER_NAME SECRET_ENCODING_PASSWORD)\n' +
 		'3. Get your list saved issuers using /myissuers command\n' +
-		'6. Delete all your issuers using /deleteissuers command\n' +
-		'7. Get user manual using /help command'
+		'4. Delete all your issuers using /deleteissuers command\n' +
+		'5. Get user manual using /help command\n' +
+		'6. Get github repo of this bot using /help command'
 }
 
 addEventListener('fetch', event => {
